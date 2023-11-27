@@ -1,0 +1,297 @@
+.container {
+  display: grid;
+  grid-template-areas: "nav header header header header " "nav main main main sidebar" "nav main main main sidebar";
+  grid-template-columns: 100px repeat(3, 20%) auto;
+  grid-template-rows: 100px auto;
+}
+
+/* ----------------- NAVIGATION ----------------- */
+nav {
+  grid-area: nav;
+  background-color: #faeef9;
+  max-width: 100px;
+  min-height: 100vh;
+  max-height: --webkit-max-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+nav svg {
+  fill: #a1a1a1;
+}
+nav .logo > a > img:first-child {
+  width: 50px;
+  border-radius: 100%;
+}
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+nav > ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0.8rem;
+  transition-duration: 600ms;
+}
+nav > ul > li > a:hover {
+  background-color: #98aa91;
+}
+nav > ul > li > a:hover svg {
+  fill: #faeef9;
+}
+nav > ul > li .green {
+  background-color: #7faf6a;
+}
+nav > ul > li .green svg {
+  fill: #faeef9;
+}
+nav .logout > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0.8rem;
+  transition-duration: 500ms;
+}
+nav .logout > a:hover {
+  background-color: #dc143c;
+}
+nav .logout > a:hover svg {
+  fill: #faeef9;
+}
+
+/* ----------------- HEADER ----------------- */
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+header > section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header > section .profile > a > img {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+header > section > a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0.3rem;
+  transition-duration: 500ms;
+}
+header > section > a > svg {
+  width: 35px;
+  height: 35px;
+  fill: #a1a1a1;
+}
+header > section > a:hover svg {
+  fill: #191919;
+}
+header > section > a .notificationRedCircle {
+  background-color: #dc143c;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 8px;
+  right: 10px;
+  border-radius: 100%;
+}
+
+/* ----------------- MAIN ----------------- */
+main {
+  grid-area: main;
+  padding: 2rem;
+}
+main .days {
+  background-color: #7faf6a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+main .days > span:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .days > span:first-child .daysCounter {
+  display: flex;
+  flex-direction: column;
+  color: #faeef9;
+  font-size: 18px;
+  border-right: 1px solid #faeef9;
+  padding-right: 1rem;
+}
+main .days > span:first-child .daysText {
+  display: flex;
+  flex-direction: column;
+  color: #faeef9;
+  font-size: 18px;
+  padding-left: 1rem;
+}
+main .days > span:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .days > span:last-child > img {
+  background-color: #faeef9;
+  border-radius: 100%;
+  padding: 0.5rem;
+  width: 45px;
+}
+main .mainAdd {
+  padding: 2rem;
+  margin-top: 2rem;
+  background-image: url("../../../public/images/addPlant.jpeg");
+  background-repeat: no-repeat;
+  min-height: 300px;
+  border-radius: 0.6rem;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+}
+main .mainAdd > h2 {
+  color: #faeef9;
+  width: 50%;
+}
+main .mainAdd > button {
+  color: #7faf6a;
+  background-color: #c8df7d;
+  align-self: flex-end;
+  transition-duration: 500ms;
+}
+main .mainAdd > button:hover {
+  background-color: #adc069;
+  color: #ffffff;
+}
+main .recommendation {
+  padding: 1rem 0;
+}
+main .recommendation .recommendationText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .recommendation .recommendationText > span {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+main .recommendation .recommendationText > span > svg {
+  fill: #ff8100;
+}
+main .recommendation .recommendationText > a {
+  color: #a1a1a1;
+}
+main .recommendation .recommendationText > a:hover {
+  text-decoration: underline;
+}
+main .recommendation .recommendationThreeElements > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main .recommendation .recommendationThreeElements > ul > li .sidebarPlant {
+  position: relative;
+  height: 100%;
+  /* -webkit-box-shadow: inset 38px 43px 92px -80px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 38px 43px 92px -80px rgba(0, 0, 0, 1);
+  box-shadow: inset 38px 43px 92px -80px rgba(0, 0, 0, 1); */
+}
+main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  border-radius: 0.8rem;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 200px;
+}
+main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span h2,
+main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span p {
+  color: #191919;
+  font-weight: 700;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span p {
+  top: 3rem;
+  font-weight: 500;
+}
+main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span > button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: #faeef9;
+}
+main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span > button:hover {
+  opacity: 85%;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 2rem;
+  padding-right: 4rem;
+}
+.sidebar .sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.sidebar .sidebarHeader > svg {
+  fill: #2e313f;
+}
+.sidebar .sidebarHeader > span {
+  font-weight: 600;
+  font-size: 24px;
+}
+.sidebar .sidebarPlant {
+  position: relative;
+}
+.sidebar .sidebarPlant img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  border-radius: 0.8rem;
+  max-height: 300px;
+  min-width: 100%;
+}
+.sidebar .sidebarPlant > span h2,
+.sidebar .sidebarPlant > span p {
+  color: #191919;
+  font-weight: 700;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.sidebar .sidebarPlant > span p {
+  top: 3rem;
+  font-weight: 500;
+}
+.sidebar .sidebarPlant > span > button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: #faeef9;
+}
+.sidebar .sidebarPlant > span > button:hover {
+  opacity: 85%;
+}/*# sourceMappingURL=Layout.css.map */
