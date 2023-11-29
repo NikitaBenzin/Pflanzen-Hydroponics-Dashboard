@@ -1,3 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #eee6ed;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 3.2rem;
+  font-size: 18px;
+  font-weight: 400;
+  transition-duration: 500ms;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 .container {
   display: grid;
   grid-template-areas: "nav header header header header " "nav main main main sidebar" "nav main main main sidebar";
@@ -8,7 +45,7 @@
 /* ----------------- NAVIGATION ----------------- */
 nav {
   grid-area: nav;
-  background-color: #faeef9;
+  background-color: #ffffff;
   max-width: 100px;
   min-height: 100vh;
   max-height: --webkit-max-height;
@@ -42,13 +79,13 @@ nav > ul > li > a:hover {
   background-color: #98aa91;
 }
 nav > ul > li > a:hover svg {
-  fill: #faeef9;
+  fill: #ffffff;
 }
 nav > ul > li .green {
   background-color: #7faf6a;
 }
 nav > ul > li .green svg {
-  fill: #faeef9;
+  fill: #ffffff;
 }
 nav .logout > a {
   display: flex;
@@ -62,7 +99,7 @@ nav .logout > a:hover {
   background-color: #dc143c;
 }
 nav .logout > a:hover svg {
-  fill: #faeef9;
+  fill: #ffffff;
 }
 
 /* ----------------- HEADER ----------------- */
@@ -133,15 +170,15 @@ main .days > span:first-child {
 main .days > span:first-child .daysCounter {
   display: flex;
   flex-direction: column;
-  color: #faeef9;
+  color: #ffffff;
   font-size: 18px;
-  border-right: 1px solid #faeef9;
+  border-right: 1px solid #ffffff;
   padding-right: 1rem;
 }
 main .days > span:first-child .daysText {
   display: flex;
   flex-direction: column;
-  color: #faeef9;
+  color: #ffffff;
   font-size: 18px;
   padding-left: 1rem;
 }
@@ -151,7 +188,7 @@ main .days > span:last-child {
   align-items: center;
 }
 main .days > span:last-child > img {
-  background-color: #faeef9;
+  background-color: #ffffff;
   border-radius: 100%;
   padding: 0.5rem;
   width: 45px;
@@ -159,16 +196,16 @@ main .days > span:last-child > img {
 main .mainAdd {
   padding: 2rem;
   margin-top: 2rem;
-  background-image: url("../../../public/images/addPlant.jpeg");
+  background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   min-height: 300px;
   border-radius: 0.6rem;
-  background-size: cover;
   display: flex;
   justify-content: space-between;
 }
 main .mainAdd > h2 {
-  color: #faeef9;
+  color: #ffffff;
   width: 50%;
 }
 main .mainAdd > button {
@@ -182,12 +219,16 @@ main .mainAdd > button:hover {
   color: #ffffff;
 }
 main .recommendation {
-  padding: 1rem 0;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  background-color: #ffffff;
 }
 main .recommendation .recommendationText {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 1rem;
 }
 main .recommendation .recommendationText > span {
   display: flex;
@@ -206,43 +247,20 @@ main .recommendation .recommendationText > a:hover {
 main .recommendation .recommendationThreeElements > ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
-main .recommendation .recommendationThreeElements > ul > li .sidebarPlant {
-  position: relative;
-  height: 100%;
-  /* -webkit-box-shadow: inset 38px 43px 92px -80px rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 38px 43px 92px -80px rgba(0, 0, 0, 1);
-  box-shadow: inset 38px 43px 92px -80px rgba(0, 0, 0, 1); */
-}
-main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-width: 100%;
+main .recommendation .recommendationThreeElements > ul > li {
+  box-shadow: inset 15px 15px 100px -63px rgb(0, 0, 0);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  padding: 0 1rem;
   border-radius: 0.8rem;
-  min-width: 100%;
-  min-height: 100%;
-  max-height: 200px;
 }
-main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span h2,
-main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span p {
-  color: #191919;
-  font-weight: 700;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
-main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span p {
-  top: 3rem;
-  font-weight: 500;
-}
-main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span > button {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  background-color: #faeef9;
-}
-main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span > button:hover {
-  opacity: 85%;
+main .recommendation .recommendationThreeElements > ul .recommendationPlant {
+  padding-top: 0.5rem;
 }
 
 .sidebar {
@@ -265,6 +283,13 @@ main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span
 }
 .sidebar .sidebarPlant {
   position: relative;
+  box-shadow: inset 15px 15px 100px -63px rgb(0, 0, 0);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  padding: 0 1rem;
+  border-radius: 0.8rem;
 }
 .sidebar .sidebarPlant img {
   -o-object-fit: cover;
@@ -290,7 +315,7 @@ main .recommendation .recommendationThreeElements > ul > li .sidebarPlant > span
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  background-color: #faeef9;
+  background-color: #ffffff;
 }
 .sidebar .sidebarPlant > span > button:hover {
   opacity: 85%;

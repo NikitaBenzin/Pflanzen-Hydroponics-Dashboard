@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
+$gray-100: #a1a1a1;
+$white-100: #ffffff;
+$white-200: #eee6ed;
+$green-100: #7faf6a;
+$green-200: #98aa91;
+$green-300: #c8df7d;
+$red-100: #dc143c;
+$black-100: #191919;
+$orange-100: #ff8100;
+$blue-100: #2e313f;
+
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +19,13 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: $white-200;
 }
 
 ul,
 li {
   list-style: none;
-}
+}  
 
 button {
   outline: none;
@@ -33,4 +45,17 @@ a {
 
 .bold {
   font-weight: 700;
+}
+
+
+@mixin recommendationPlant {
+  -webkit-box-shadow: inset 15px 15px 100px -63px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 15px 15px 100px -63px rgba(0, 0, 0, 1);
+  box-shadow: inset 15px 15px 100px -63px rgba(0, 0, 0, 1);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  padding: 0 1rem;
+  border-radius: 0.8rem;
 }
