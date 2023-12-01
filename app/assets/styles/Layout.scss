@@ -1,4 +1,4 @@
-@import '../global.scss';
+@import "../global.scss";
 
 .container {
   display: grid;
@@ -12,6 +12,7 @@
 
 /* ----------------- NAVIGATION ----------------- */
 nav {
+  position: fixed;
   grid-area: nav;
   background-color: $white-100;
   max-width: 100px;
@@ -23,7 +24,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 0;
+  padding: 1rem 1.5rem;
 
   svg {
     fill: $gray-100;
@@ -246,7 +247,7 @@ main {
       justify-content: space-between;
       align-items: center;
       padding-bottom: 1rem;
-      
+
       > span {
         display: flex;
         align-items: flex-start;

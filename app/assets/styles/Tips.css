@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #eee6ed;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 3.2rem;
+  font-size: 18px;
+  font-weight: 400;
+  transition-duration: 500ms;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.tips {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  background-color: #ffffff;
+  padding-bottom: 1.5rem;
+}
+.tips .tipsText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.tips .tipsText > span {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.tips .tipsText > span > svg {
+  fill: #2e313f;
+}
+.tips .tipsText > a {
+  color: #a1a1a1;
+}
+.tips .tipsText > a:hover {
+  text-decoration: underline;
+}
+.tips .tipsItems > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.tips .tipsItems > ul > li:not(.tips .tipsItems > ul > li:last-child) {
+  padding-bottom: 1rem;
+}
+.tips .tipsItems > ul > li .itemImg {
+  border-radius: 0.8rem;
+  background-image: url("../../../public/images/poliv.jpg");
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+.tips .tipsItems > ul > li > p {
+  color: #a1a1a1;
+  font-size: 14px;
+}/*# sourceMappingURL=Tips.css.map */

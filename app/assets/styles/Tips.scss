@@ -1,0 +1,62 @@
+@import "../global.scss";
+
+.tips {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  background-color: $white-100;
+  padding-bottom: 1.5rem;
+
+  .tipsText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+
+    > span {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+
+      > svg {
+        fill: $blue-100;
+      }
+    }
+
+    > a {
+      color: $gray-100;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .tipsItems {
+    > ul {
+      > li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:not(&:last-child) {
+          padding-bottom: 1rem;
+        }
+
+        .itemImg {
+          border-radius: 0.8rem;
+          background-image: url("../../../public/images/poliv.jpg");
+          padding: 50px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: block;
+        }
+
+        > p {
+          color: $gray-100;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
